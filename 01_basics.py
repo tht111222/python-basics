@@ -29,3 +29,13 @@ print("删除第二个元素之后：",list1)
 #拼接
 list2+=[1,2,3,4,5]
 print(list2)
+#循环
+for x in list1:
+    print(x)
+    if x==1997:
+        print("1997 is in the list")
+    else:
+        print("1997 is not in the list")    
+        break    
+
+
