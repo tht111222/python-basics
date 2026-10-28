@@ -38,4 +38,29 @@ for x in list1:
         print("1997 is not in the list")    
         break    
 
+#字典
+#创建加查
+tinydict1={"abc":123}
+tinydict2={"abc":123,"xyz":456}
+print("tinydict1:",tinydict1)
+print("length of tinydict1:",len(tinydict1))
+print("type of tinydict1:",type(tinydict1))
+tinydict3={'Name':"tht","Age":6,"class":"Second"}
+print("tinydict3['Name']:",tinydict3["Name"])
+print("tinydict3['Age']",tinydict3["Age"])
+print("tinydict3['qq']",tinydict3["qq"])
+tinydict3["qq"]="123456"
+print("更新后的字典：",tinydict3)
+del tinydict3["class"]
+print("删除后的字典：",tinydict3)
+tinydict3.clear()
+print("清空后的字典：",tinydict3)
+del tinydict3
+print("删除后的字典：",tinydict3)
+#重复出现时记住后值
+tinydict4={"abc":123,"xyz":456,"abc":789,"xyz":452}
+print("tinydict4:",tinydict4)
+#不能用列表作为字典的key
+tinydict={["wc"]:666}
+print("tinydict['wc']:",tinydict["wc"])
 
