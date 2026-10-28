@@ -30,13 +30,12 @@ print("删除第二个元素之后：",list1)
 list2+=[1,2,3,4,5]
 print(list2)
 #循环
-for x in list1:
-    print(x)
-    if x==1997:
-        print("1997 is in the list")
-    else:
-        print("1997 is not in the list")    
-        break    
+
+if 1997 in list:
+    print("1997 is in the list")
+else:
+    print("1997 is not in the list")    
+
 
 #字典
 #创建加查
@@ -48,19 +47,37 @@ print("type of tinydict1:",type(tinydict1))
 tinydict3={'Name':"tht","Age":6,"class":"Second"}
 print("tinydict3['Name']:",tinydict3["Name"])
 print("tinydict3['Age']",tinydict3["Age"])
-print("tinydict3['qq']",tinydict3["qq"])
-tinydict3["qq"]="123456"
-print("更新后的字典：",tinydict3)
 del tinydict3["class"]
 print("删除后的字典：",tinydict3)
 tinydict3.clear()
 print("清空后的字典：",tinydict3)
 del tinydict3
-print("删除后的字典：",tinydict3)
+#print("删除后的字典：",tinydict3)
 #重复出现时记住后值
 tinydict4={"abc":123,"xyz":456,"abc":789,"xyz":452}
 print("tinydict4:",tinydict4)
 #不能用列表作为字典的key
-tinydict={["wc"]:666}
-print("tinydict['wc']:",tinydict["wc"])
+#tinydict={["wc"]:666}
+#print("tinydict['wc']:",tinydict["wc"])
+
+#词频统计
+#split()方法对字符串进行切片
+text = "the cat and the hat"
+split_text = text.split()
+print("split_text:",split_text)
+print("text.split('-'):",text.split("-"))
+len_split_text=len(split_text)
+print("len_split_text:",len_split_text)
+#dict.get()方法获取字典中指定键的值，如果键不存在，则返回默认值
+d={"the":11}
+d.get("the",0)
+#定义函数进行词频统计
+def word_count(text):
+    split_text=text.split()
+    word_freq={}
+    for word in split_text:
+        word_freq[word]=word_freq.get(word,0)+1
+    return word_freq
+result = word_count("the cat and the dog and the bird")
+print(result)
 
